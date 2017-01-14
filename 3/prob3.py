@@ -17,8 +17,8 @@ def xor(input, key):
     return result
 
 def str_score(str):
-    score  = ch_freq("etaozxkwfihlvpbqmjg", str)
-    score = fabs(84.7- score)
+    score  = ch_freq("etao", str)
+    score = fabs(37.4- score)
     return score
 
 def ch_freq(ch_str, str):
