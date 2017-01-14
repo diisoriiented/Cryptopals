@@ -43,13 +43,14 @@ def crack(input):
         if score < best:
             best = score
             msg = result
-    return msg
+    return msg, best
 
 
 def main():
     hex = h2b(argv[1])
-    result = crack(hex)
+    (result,best) = crack(hex)
     print (result)
+    print (best)
 
 
 main()
