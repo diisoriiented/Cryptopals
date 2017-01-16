@@ -18,20 +18,25 @@ def xor(input, key):
 
 def str_score(str):
     score  = ch_freq("etao", str)
-    score = fabs(37.4- score)
+    score = fabs(37.4-score)
     return score
 
 def ch_freq(ch_str, str):
-    score = 0
-    count = 0
-    leng = len(str)
+    score = 0.0
+    count = 0.0
+    str = str.split(' ')
+    res_str = ""
+    for string in str:
+        res_str += string
+    leng = len(res_str)
     for char in ch_str:
-        count = 0
-        for ch in str:
+        count = 0.0
+        for ch in res_str:
             if ch not in "abcdefghijklmnopqrstuvwxyz' ": return 0
-            if char in str:
+            # print(ch)
+            if char == ch:
                 count += 1
-        score += count/leng
+        score += (count/leng) * 100
     return score
 
 def crack(input):

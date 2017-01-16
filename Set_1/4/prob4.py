@@ -48,15 +48,16 @@ def crack(input):
 
 
 def main():
-    best = 0
+    global_score = 0
     msg  = ""
     hex_file = open(argv[1], 'r').read().split('\n')
     for line in hex_file:
-        line = h2b(line)
-        (result,score) = crack(line)
-        if score > best:
+        original_hex = line #   Saves original line
+        line = h2b(line) #    Converts to binary
+        (result,score) = crack(line) #    Should return highest scoring binary string as well as its score
+        if score > global_score: #    If the score 
             msg = result
             best = score
-    print(msg)
-    print(best)
+    # print(msg)
+    # print(best)
 main()
