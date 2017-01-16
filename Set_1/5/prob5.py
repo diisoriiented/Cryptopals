@@ -8,7 +8,6 @@ def rep_xor(key, input):
     numtimes = 0
     for ch in input:
         if counter == leng: counter = 0
-        print("Char: %s -- Key: %s") % (ch, key[counter])
         result += chr(ord(ch) ^ ord(key[counter]))
         counter += 1
     return result
