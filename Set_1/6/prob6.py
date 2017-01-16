@@ -1,6 +1,8 @@
 #!/usr/local/bin/pythonw
 from sys import *
 from math import *
+from binascii import *
+from base64 import *
 
 def hamming_dist (s1, s2):
     count = 0
@@ -14,5 +16,11 @@ def hamming_dist (s1, s2):
 
 def main():
     #print(hamming_dist("this is a test", "wokka wokka!!!\n")) -- works correctly (answer is 37)
-
+    file = open(argv[1], 'r')
+    text = ""
+    for line in file:
+        text += line
+    text = text.rstrip()
+    text = b64decode(text)
+    
 main()
