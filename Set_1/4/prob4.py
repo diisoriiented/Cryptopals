@@ -60,7 +60,8 @@ def main():
         original_hex = line #   Saves original line
         line = h2b(line) #    Converts to binary
         (result,score) = crack(line) #    Should return highest scoring binary string as well as its score
-        if score < global_score: #    If the score
+        print(result, score)
+        if score < global_score:
             msg = result
             best = score
     print(msg)
