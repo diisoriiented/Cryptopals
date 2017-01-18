@@ -1,6 +1,8 @@
 #!/usr/local/bin/pythonw
 from sys import *
 from binascii import *
+
+
 def rep_xor(key, input):
     result = ""
     counter = 0
