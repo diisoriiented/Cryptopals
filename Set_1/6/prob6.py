@@ -12,7 +12,7 @@ def pad_bin(bin):
         return bin
 
 def hamming_dist (s1, s2):
-    count = 0
+    count = 0 
     for ch1, ch2 in zip(s1, s2):
         b1 = pad_bin(bin(ord(ch1))[2:])
         b2 = pad_bin(bin(ord(ch2))[2:])
@@ -98,7 +98,7 @@ def main():
     text = b64decode(file)  #   Converts from base64 to ascii
 
     KEYSIZE = get_keysize(text) # Gets keysize using hamming distance
-    
+
     #   Step 6, adding arrays of blocks of 5
     block_arr = []
     block_text = ""
