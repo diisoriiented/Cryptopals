@@ -8,7 +8,9 @@ def pad_PKCS7(str, leng):
     return str
 
 def main():
-    padded_str = pad_PKCS7("YELLOW SUBMARINE", 20)
-
+    file = open(sys.argv[1], 'r').read().split("\n")
+    text = ""
+    for line in file:
+        text += line
 
 main()
